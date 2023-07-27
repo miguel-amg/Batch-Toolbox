@@ -15,9 +15,9 @@ O programa só poderá ser executado em windows.
 - Listar todos os Controladores do computador.                                      
 - Informações do sistema.                                        
 - Listar programas abertos.                                
-- Matar programa                                          
-- Reparar ficheiros corruptos                    
-- Procurar problemas de bateria                          
-- Verificar e reparar problemas de disco                  
-- Remocao de vírus comuns de pen-drive                    
+- Terminar programa.                                          
+- Reparar ficheiros corruptos.                    
+- Procurar problemas de bateria.                          
+- Verificar e reparar problemas de disco.                  
+- Remocao de vírus comuns de pen-drive.                    
 
