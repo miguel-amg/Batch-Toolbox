@@ -5,21 +5,21 @@ Serão realizados updates ao longo do tempo.
 O programa só poderá ser executado em windows.
 
 ## Incluído:
--Listar palavras-passe WiFi armazenadas.
--Listar informações IP.                                                        
--Obter o IP de um ‘website’.                                          
--Realizar Flush de DNS.                                                          
--Encerrar um PC na mesma rede.                                        
--Realizar Ping a um determinado endereço IP.                                                
--Traçar rota Ping.                                                    
--Listar todos os Controladores do computador.                                      
--Informações do sistema.                                        
--Listar programas abertos.                                
--Matar programa                                          
--Reparar ficheiros corruptos                    
--Procurar problemas de bateria                          
--Verificar e reparar problemas de disco                  
--Remocao de vírus comuns de pen-drive                    
+- Listar palavras-passe WiFi armazenadas.
+- Listar informações IP.                                                        
+- Obter o IP de um ‘website’.                                          
+- Realizar Flush de DNS.                                                          
+- Encerrar um PC na mesma rede.                                        
+- Realizar Ping a um determinado endereço IP.                                                
+- Traçar rota Ping.                                                    
+- Listar todos os Controladores do computador.                                      
+- Informações do sistema.                                        
+- Listar programas abertos.                                
+- Matar programa                                          
+- Reparar ficheiros corruptos                    
+- Procurar problemas de bateria                          
+- Verificar e reparar problemas de disco                  
+- Remocao de vírus comuns de pen-drive                    
 
 ## Execução:
 Transferir o repositorio e executar o ficheiro Toolbox.bat
