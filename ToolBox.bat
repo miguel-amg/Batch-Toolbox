@@ -1,11 +1,16 @@
 @echo off
+echo :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+echo : AVISO: E recomendado executar em tela cheia.                                          :
+echo : AVISO: E recomendado executar como administrador para obter todas as funcionalidades. :
+echo :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+echo.
 pause
 title ToolBox
 
 ::variaveis
 set host=%COMPUTERNAME%
 
-::Fonte ascii (Label3d) e (aligator2) https://onlineasciitools.com/convert-text-to-ascii-art
+::Fonte ascii (Label3d)/(banner3d) e (aligator2) https://onlineasciitools.com/convert-text-to-ascii-art, https://patorjk.com
 :inicio
 cls
 echo. 
@@ -17,13 +22,27 @@ echo ..##..##..####..##..##........##..##.....##
 echo ..##..##...###..##..##....##..##..##.....##
 echo .####.##....##.####..######..####..#######.
 echo ____________________________________________
-echo Por: Miguel Guimaraes
+echo Por: Miguel Guimaraes.
 echo Criado em: 28/05/2020.
 echo ____________________________________________
 echo PC atual: %host%
 echo Data: %TIME%
+echo _____________________________________________
 echo.
-echo AVISO: E recomendado executar em tela cheia.
+pause
+cls
+echo. 
+echo .####.##....##.####..######..####..#######.
+echo ..##..###...##..##..##....##..##..##.....##
+echo ..##..####..##..##..##........##..##.....##
+echo ..##..##.##.##..##..##........##..##.....##
+echo ..##..##..####..##..##........##..##.....##
+echo ..##..##...###..##..##....##..##..##.....##
+echo .####.##....##.####..######..####..#######.
+echo ____________________________________________
+echo UPDATES:
+echo 29/07/2023 - Adicionada a capacidade de 
+echo gravar os resultados a mais comandos 
 echo _____________________________________________
 echo.
 pause
@@ -93,8 +112,47 @@ If /I "%escolhax%"=="disco" goto discoscan
 If /I "%escolhax%"=="sair" exit
 goto fail
 
+
+:::::::::::::::::::: MODULO DE GRAVACAO :::::::::::::::::::: 
+
+:gravar
+echo Gravar informacoes em documento de texto?
+Set /p escolhatxt="(s/n): "
+If /I "%escolhatxt%"=="s" goto txtgravar
+If /I "%escolhatxt%"=="n" goto base
+pause
+cls
+Echo Erro: opcao nao reconhecida.
+echo.
+pause
+cls
+goto gravar
+
+:txtgravar
+cls
+echo _______________________________________________________
+echo Sera necessaria permissao de administrador!
+echo _______________________________________________________
+pause
+cls
+echo.
+echo Onde quer gravar o ficheiro .txt?
+echo Ex:(C:\Users\Utilizador\Desktop\)
+Set /p caminho="Caminho: "
+cd %caminho%
+
+:: Gravar dependendo do comando que foi executado
+If /I "%escolhax%"=="ip" ipconfig > Ipconfig.txt
+If /I "%escolhax%"=="drivers" driverquery > Drivers.txt
+If /I "%escolhax%"=="infosis" systeminfo > InfoPc.txt
+
+goto base
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: 
+
 :passwifi
 cls
+echo.
 echo ########::'########:'########::'########::'######::
 echo ##.... ##: ##.....:: ##.... ##: ##.....::'##... ##:
 echo ##:::: ##: ##::::::: ##:::: ##: ##::::::: ##:::..::
@@ -102,12 +160,12 @@ echo ########:: ######::: ##:::: ##: ######:::. ######::
 echo ##.. ##::: ##...:::: ##:::: ##: ##...:::::..... ##:
 echo ##::. ##:: ##::::::: ##:::: ##: ##:::::::'##::: ##:
 echo ##:::. ##: ########: ########:: ########:. ######::
-echo ..:::::..::........::........:::........:::......:::            
+echo ..:::::..::........::........:::........:::......::         
 echo _________________________________________________________________________________
 NETSH WLAN SHOW PROFILE 
 echo _________________________________________________________________________________
 echo.
-echo As vezes e preciso por "rede"
+echo Inserir a rede entre aspas, "rede".
 Set /p passescolha= "Selecionar rede: "
 echo. 
 pause
@@ -134,27 +192,8 @@ ipconfig
 echo _________________________________________________________________________________
 echo.
 echo.
-:denovotxt
-echo Gravar informacoes em documento de texto?
-Set /p escolhatxt="(s/n): "
-If /I "%escolhatxt%"=="s" goto txtgravar
-If /I "%escolhatxt%"=="n" goto base
-pause
-cls
-Echo Erro opcao nao reconhecida
-echo.
-pause
-cls
-goto denovotxt
+goto gravar
 
-:txtgravar
-echo.
-echo Onde quer gravar o ficheiro .txt?
-echo Ex:(C:\Users\Utilizador\Desktop\)
-Set /p caminho="Caminho: "
-cd %caminho%
-ipconfig > Ipconfig.txt
-gotobase
 
 :websiteip
 cls
@@ -210,7 +249,7 @@ echo.
 driverquery
 echo.
 pause
-goto base
+goto gravar
 
 :programasstart
 cls
@@ -243,13 +282,20 @@ goto base
 
 :infosys
 cls 
-echo _________________________________________________________________________________
-echo Informacoes do PC
+echo '####:'##::: ##:'########::'#######:::::'########:::'######::
+echo . ##:: ###:: ##: ##.....::'##.... ##:::: ##.... ##:'##... ##:
+echo : ##:: ####: ##: ##::::::: ##:::: ##:::: ##:::: ##: ##:::..::
+echo : ##:: ## ## ##: ######::: ##:::: ##:::: ########:: ##:::::::
+echo : ##:: ##. ####: ##...:::: ##:::: ##:::: ##.....::: ##:::::::
+echo : ##:: ##:. ###: ##::::::: ##:::: ##:::: ##:::::::: ##::: ##:
+echo '####: ##::. ##: ##:::::::. #######::::: ##::::::::. ######::
+echo ....::..::::..::..:::::::::.......::::::..::::::::::......:::
 echo _________________________________________________________________________________
 msinfo32
 systeminfo
+echo _________________________________________________________________________________
 pause
-goto base
+goto gravar
 
 :pingtracar
 cls 
@@ -265,7 +311,7 @@ goto base
 :desligar
 cls 
 echo ________________
-echo Iniciando...
+echo Abrindo dialogo.
 echo ________________
 shutdown -i
 cls
@@ -453,10 +499,10 @@ echo Este comando necessita de permissao de administrador!
 echo _______________________________________________________
 pause
 cls
+powercfg /energy
 echo __________________
 echo Commando executado
 echo __________________
-powercfg /energy
 pause
 cls
 goto base
