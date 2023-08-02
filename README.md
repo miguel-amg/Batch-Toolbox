@@ -21,3 +21,4 @@ O programa só poderá ser executado em windows.
 - Verificar e reparar problemas de disco.                  
 - Remocao de vírus comuns de pen-drive.                    
 
+![Preview do programa](/Screenshots/sc1.png)
