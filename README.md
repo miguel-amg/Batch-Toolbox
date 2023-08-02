@@ -19,6 +19,7 @@ O programa só poderá ser executado em windows.
 - Reparar ficheiros corruptos.                    
 - Procurar problemas de bateria.                          
 - Verificar e reparar problemas de disco.                  
-- Remocao de vírus comuns de pen-drive.                    
+- Remocao de vírus comuns de pen-drive.          
 
+# Preview
 ![Preview do programa](/Screenshots/sc1.png)
