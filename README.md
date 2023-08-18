@@ -6,9 +6,6 @@ This tool will continue to receive updates over time, enhancing its capabilities
 
 Please note that this tool is exclusively compatible with Windows operating systems.
 
-# How to run:
-Simply execute the provided toolbox.bat file.
-
 ## Included:
 - Stored wifi network info.
 - Show IP info.                                                        
@@ -24,7 +21,10 @@ Simply execute the provided toolbox.bat file.
 - Repair corrupt files.                   
 - Search battery problems.                        
 - Check and repair disk problems.                  
-- Pendrive virus removal tool.         
+- Pendrive virus removal tool.
 
 # Preview
 ![Program preview](/Screenshots/sc1.png)
+
+## How to run:
+Simply execute the provided toolbox.bat file.
