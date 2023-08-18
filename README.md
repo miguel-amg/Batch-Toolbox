@@ -1,25 +1,27 @@
-# TOOLBOX
-Um programa desenvolvido em batch que simplifica as funcionalidades batch do Windows e apresenta-as numa ‘interface’ simplificada.
-Serão realizados updates ao longo do tempo.
+# BATCH TOOLBOX
+Batch Toolbox is an all-in-one program developed in Batch scripting that streamlines numerous 
+batch commands and presents them through a simplified and user-friendly interface.
 
-O programa só poderá ser executado em windows.
+This tool will continue to receive updates over time, enhancing its capabilities and features.
 
-## Incluído:
-- Listar palavras-passe WiFi armazenadas.
-- Listar informações IP.                                                        
-- Obter o IP de um ‘website’.                                          
-- Realizar Flush de DNS.                                                          
-- Encerrar um PC na mesma rede.                                        
-- Realizar Ping a um determinado endereço IP.                                                
-- Traçar rota Ping.                                                    
-- Listar todos os Controladores do computador.                                      
-- Informações do sistema.                                        
-- Listar programas abertos.                                
-- Terminar programa.                                          
-- Reparar ficheiros corruptos.                    
-- Procurar problemas de bateria.                          
-- Verificar e reparar problemas de disco.                  
-- Remocao de vírus comuns de pen-drive.          
+Please note that this tool is exclusively compatible with Windows operating systems.
+
+## Included:
+- Stored wifi network info.
+- Show IP info.                                                        
+- IP address retrieval from a specified 'website'.                                   
+- Execute DNS flush.                                                       
+- Shutdown computers on the same network.                                   
+- Perform a ping to a designated IP address.                                              
+- Trace route ping.                                              
+- Full computer drivers list.                        
+- Full system info.                                       
+- List of all running programs.                                 
+- Force kill program.                                        
+- Repair corrupt files.                   
+- Search battery problems.                        
+- Check and repair disk problems.                  
+- Pendrive virus removal tool.         
 
 # Preview
-![Preview do programa](/Screenshots/sc1.png)
+![Program preview](/Screenshots/sc1.png)
