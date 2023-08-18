@@ -6,6 +6,9 @@ This tool will continue to receive updates over time, enhancing its capabilities
 
 Please note that this tool is exclusively compatible with Windows operating systems.
 
+# How to run:
+Simply execute the provided toolbox.bat file.
+
 ## Included:
 - Stored wifi network info.
 - Show IP info.                                                        
