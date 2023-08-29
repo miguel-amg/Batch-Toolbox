@@ -1,13 +1,13 @@
 @echo off
-echo :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-echo :: WARNING: Please run in fullscreen.                                                    ::
-echo :: WARNING: Please run the program as admin for the full experience.                     ::
-echo :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+echo ..........................................................................................
+echo :  WARNING: Please run in fullscreen.                                                    :
+echo :  WARNING: Please run the program as admin for the full experience.                     :
+echo :........................................................................................:
 echo.
 echo.
-echo :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-echo :: TIP : Do ctrl+c to stop the current command and return to the main menu               ::
-echo :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+echo ..........................................................................................
+echo :  TIP : Do ctrl+c to stop the current command and return to the main menu               :
+echo :........................................................................................:
 echo.
 pause
 title Batch ToolBox
@@ -19,76 +19,79 @@ set host=%COMPUTERNAME%
 :inicio
 cls
 echo. 
-echo :::::::::::::::::::::::::::::::::::::::::::
-echo :: Created by: Miguel Guimaraes.         ::
-echo :: Created at: 28/05/2020.               ::
-echo :::::::::::::::::::::::::::::::::::::::::::
+echo ..........................................
+echo : Created by: Miguel Guimaraes.          :
+echo : Created at: 28/05/2020.                :
+echo :........................................:
 echo.
 echo - Current computer: %host%       
 echo - Current date: %TIME%
 echo.
+VER
+echo.
 pause
 cls
 echo. 
-echo ::::::::::::::::::::::::::::::::::::::::::::::::
-echo :: UPDATES:                                   ::
-echo :: 29/07/2023 - Added saving to some commands ::
-echo :: 17/07/2023 - Full english translation and  ::
-echo :: overall polish                             ::
-echo ::::::::::::::::::::::::::::::::::::::::::::::::
+echo ...............................................
+echo : UPDATES:                                    :
+echo :                                             :
+echo :  29/07/2023 - Added saving to some commands :
+echo :  17/07/2023 - Full english translation and  :
+echo :  overall polish                             :
+echo :  29/08/2023 - UI polish and minor fixes     :
+echo :.............................................:
 echo.
 pause
 
 :: MAIN MENU 
 :base
 cls
-color 7
-echo :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: 
-echo '########::'#######:::'#######::'##::::::::::'########:::'#######::'##::::'##:::
-echo ... ##..::'##.... ##:'##.... ##: ##:::::::::: ##.... ##:'##.... ##:. ##::'##::::
-echo ::: ##:::: ##:::: ##: ##:::: ##: ##:::::::::: ##:::: ##: ##:::: ##::. ##'##:::::
-echo ::: ##:::: ##:::: ##: ##:::: ##: ##:::::::::: ########:: ##:::: ##:::. ###::::::
-echo ::: ##:::: ##:::: ##: ##:::: ##: ##:::::::::: ##.... ##: ##:::: ##::: ## ##:::::
-echo ::: ##:::: ##:::: ##: ##:::: ##: ##:::::::::: ##:::: ##: ##:::: ##:: ##:. ##::::
-echo ::: ##::::. #######::. #######:: ########:::: ########::. #######:: ##:::. ##:::
-echo :::..::::::.......::::.......:::........:::::........::::.......:::..:::::..::::
+color 0F
+echo  ::::::::::: ::::::::   ::::::::  :::        :::::::::   ::::::::  :::    ::: 
+echo      :+:    :+:    :+: :+:    :+: :+:        :+:    :+: :+:    :+: :+:    :+: 
+echo      +:+    +:+    +:+ +:+    +:+ +:+        +:+    +:+ +:+    +:+  +:+  +:+  
+echo      +#+    +#+    +:+ +#+    +:+ +#+        +#++:++#+  +#+    +:+   +#++:+   
+echo      +#+    +#+    +#+ +#+    +#+ +#+        +#+    +#+ +#+    +#+  +#+  +#+  
+echo      #+#    #+#    #+# #+#    #+# #+#        #+#    #+# #+#    #+# #+#    #+# 
+echo      ###     ########   ########  ########## #########   ########  ###    ###           
+echo.                   
+echo.
+echo ...............................................................................
+echo :             NETWORK TOOLS           :             PINGING TOOLS             :
+echo ..............................................................................:
+echo :                                     :                                       :
+echo :  1- Get stored network details      :   6- Ping an IP adress                :
+echo :  2- IP configuration                :   7- Trace route to a IP adress       :
+echo :  3- Website IP extractor            :                                       :
+echo :  4- DNS flush                       :                                       :
+echo :  5- Remote shutdown                 :                                       : 
+echo :                                     :                                       : 
+echo ...............................................................................
 echo.
 echo.
-echo ::::::::::::::::::::::::::::::::::::::::  :::::::::::::::::::::::::::::::::::::: 
-echo ::            NETWORK TOOLS           ::  ::          PINGING TOOLS           ::
-echo ::....................................::  ::..................................::
-echo ::                                    ::  ::                                  ::
-echo ::  1- Stored wifi network info       ::  ::  6- Execute ping                 ::
-echo ::  2- IP info                        ::  ::  7- Trace route ping             ::
-echo ::  3- Get ip adress from a website   ::  ::                                  ::
-echo ::  4- DNS flush                      ::  :::::::::::::::::::::::::::::::::::::: 
-echo ::  5- Close pc on the same network   :: 
-echo ::                                    :: 
-echo ::::::::::::::::::::::::::::::::::::::::  
+echo ...............................................................................
+echo :                                  SYSTEM TOOLS                               :
+echo ...............................................................................
+echo :                                                                             :
+echo :  8-  Display installed drivers                                              :
+echo :  9-  Display PC details                                                     :
+echo :  10- Display all running programs                                           :
+echo :  11- Force kill a program                                                   :
+echo :  12- Repair corrupt files                                         [ADMIN]   :
+echo :  13- Search battery problems                                      [ADMIN]   :
+echo :  14- Check and repair disk problems                               [ADMIN]   :  
+echo :                                                                             : 
+echo ...............................................................................
 echo.
 echo.
-echo :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: 
-echo ::                                 SYSTEM TOOLS                               ::
-echo ::............................................................................:: 
-echo ::                                                                            ::
-echo ::  8-  Full drivers list                                                     ::
-echo ::  9-  Full computer info                                                    ::
-echo ::  10- List of all opened programs                                           ::
-echo ::  11- Force kill program                                                    ::
-echo ::  12- Repair corrupt files                                         [ADMIN]  :: 
-echo ::  13- Search battery problems                                      [ADMIN]  ::  
-echo ::  14- Check and repair disk problems                               [ADMIN]  ::     
-echo ::                                                                            ::
-echo :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: 
+echo ...............................................................................
+echo :                                   OTHER TOOLS                               :
+echo ...............................................................................
+echo :                                                                             :
+echo :  15- Pendrive virus removal tool                                  [ADMIN]   :
+echo :                                                                             :
+echo :..............................................................................
 echo.
-echo.
-echo :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: 
-echo ::                                 OTHER TOOLS                                ::
-echo ::............................................................................:: 
-echo ::                                                                            ::
-echo ::  15- Pendrive virus removal tool                                  [ADMIN]  ::  
-echo ::                                                                            :: 
-echo ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 echo.
 echo Write the corresponding option number.
 Set /p escolhax=" Select: "
@@ -165,7 +168,9 @@ echo :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 NETSH WLAN SHOW PROFILE 
 echo :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 echo.
-echo Inser the network between quotes like the following example: "network_name".
+echo To obtain the details of the desired network insert its name 
+echo between quotes like the following example: "network_name".
+echo.
 Set /p passescolha= "Select the network: "
 echo. 
 pause
@@ -190,6 +195,7 @@ echo ....::..::::::::::::....::..::::..::..:::::::::.......:::
 echo.                       
 echo :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 ipconfig
+echo.
 echo :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 echo.
 echo.
@@ -300,17 +306,35 @@ echo :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 msinfo32
 systeminfo
 echo :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+echo.
 pause
 goto gravar
 
 :pingtracar
 cls 
-echo :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-Set /p tracarpingip="Write IP: "
-echo :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+echo '########:'########:::::'###:::::'######::'########::::
+echo ... ##..:: ##.... ##:::'## ##:::'##... ##: ##.....:::::
+echo ::: ##:::: ##:::: ##::'##:. ##:: ##:::..:: ##::::::::::
+echo ::: ##:::: ########::'##:::. ##: ##::::::: ######::::::
+echo ::: ##:::: ##.. ##::: #########: ##::::::: ##...:::::::
+echo ::: ##:::: ##::. ##:: ##.... ##: ##::: ##: ##::::::::::
+echo ::: ##:::: ##:::. ##: ##:::: ##:. ######:: ########::::
+echo :::..:::::..:::::..::..:::::..:::......:::........:::::
+echo.
+echo With this tool you will be able to trace the route to a IP adress.
+echo You can insert the IP adress in IPV4 format or you can insert a website 
+echo URL if that is what you need.
+echo.
+Set /p tracarpingip="Insert the IP adress: "
+echo.
 pause
 cls
+echo :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+echo.
 pathping %tracarpingip%
+echo.
+echo :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+echo.
 pause
 goto base
 
@@ -319,6 +343,7 @@ cls
 echo :::::::::::::::::::::::::::::::::::::::::
 echo ::          Dialog box opened          ::
 echo :::::::::::::::::::::::::::::::::::::::::
+echo.
 shutdown -i
 cls
 echo :::::::::::::::::::::::::::::::::::::::::
@@ -354,6 +379,7 @@ cls
 echo ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 echo :: The dns flush command helps solve some conectivity problems. ::
 echo ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+echo.
 pause
 cls
 echo :::::::::::::::::::::::::::::::::::::::::
@@ -365,6 +391,7 @@ echo.
 echo :::::::::::::::::::::::::::::::::::::::::
 echo ::         Dns flush finished          ::
 echo :::::::::::::::::::::::::::::::::::::::::
+echo.
 pause 
 cls
 goto base
